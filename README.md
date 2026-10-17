@@ -33,6 +33,16 @@ polysulfide shuttling in lithium–sulfur batteries. All seven PUs share an HDI/
 4. **Predictions written before the experiment.** 43 rule-based entries (22 directional),
    each with a threshold or interval, a decision rule and a scoring script, fixed before the first synthesis
    (version 2).
+   
+## Selected figures
+
+![Receiver uptake rate: the PU receiver is not an ideal sink](figures/receiver_not_ideal_sink.png)
+
+![K–D identifiability](figures/K_D_identifiability.png)
+
+![Global sensitivity of the design](figures/global_sensitivity.png)
+
+![Computed C=O shifts](figures/carbonyl_shifts.png)
 
 ## Methods and tools
 
