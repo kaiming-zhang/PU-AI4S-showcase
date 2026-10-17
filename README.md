@@ -42,25 +42,59 @@ harmonic frequencies; pytest (61 tests) and seeded, reproducible runs.
 
 ## Figures
 
-All inputs are assumed values; the figures are drawn from stored results of the toolkit.
+> All inputs are assumed values. The figures are drawn from stored results of the toolkit; no experimental data exist yet.
 
-![receiver not ideal sink](figures/receiver_not_ideal_sink.png)
+---
 
-**What you see:** receiver uptake rate relative to the ideal steady rate K D c<sub>0</sub>/L<sub>m</sub> (assumed inputs): the PU receivers peak at only 0.31–0.48 of it (shaded: default couple within 10 % of its peak, τ = 0.27–0.84). **What it means for the experiment:** the time-lag slope would underestimate the permeability, so K and D are fitted with the full model.
+### 1. The PU receiver is not an ideal sink
 
-![K D identifiability](figures/K_D_identifiability.png)
+<p align="center">
+  <img src="figures/receiver_not_ideal_sink.png" alt="Receiver uptake rate versus dimensionless time" width="85%">
+</p>
 
-**What you see:** posterior regions of K and D<sub>PU</sub> from synthetic data (assumed D<sub>PU</sub> = 3 × 10<sup>−9</sup> cm<sup>2</sup> s<sup>−1</sup>, K = 1). Three early samples give a long ridge (r = −0.95); a near-equilibrium sample or Raman profiles shrink it (r = −0.65, −0.18, −0.23). **What it means for the experiment:** the plan includes one near-equilibrium sample or Raman profiles.
+**What it shows.** Receiver uptake rate relative to the ideal steady rate K·D·c<sub>0</sub>/L<sub>m</sub>. The PU receivers peak at only 0.31–0.48 of it (shaded: the default couple stays within 10 % of its peak for τ = 0.27–0.84).
 
-![global sensitivity](figures/global_sensitivity.png)
+**Why it matters.** The classic time-lag slope would underestimate the permeability, so K and D are fitted with the full model instead.
 
-**What you see:** share of variance (η<sup>2</sup>) of two design outputs explained by each unknown input, with D<sub>PU</sub> and K fixed: UV-vis repeatability explains 0.94 of the uncertainty of ln K, the detection limit 0.51 of the detection margin at the first sample. **What it means for the experiment:** these two calibrations come first, before the PU films exist.
+---
 
-![carbonyl shifts](figures/carbonyl_shifts.png)
+### 2. Early samples alone cannot separate K and D
 
-**What you see:** computed C=O shifts on binding (top) and for thio-products against their parent (bottom). A product C=O lies 114–142 cm<sup>−1</sup> below its parent only when the Li of S<sub>4</sub>Li sits on it; without Li it stays within 14 cm<sup>−1</sup> (DFT). Positive xTB values: Li<sub>2</sub>S<sub>4</sub> on the alkoxy O. **What it means for the experiment:** FTIR can miss or mimic the reaction, so an un-aged control and model-compound NMR are added.
+<p align="center">
+  <img src="figures/K_D_identifiability.png" alt="Posterior regions of K and D for different sampling plans" width="100%">
+</p>
 
-`application_summary.pdf` / `.docx`: two-page summary.
+**What it shows.** Posterior regions of K and D<sub>PU</sub> from synthetic data (assumed D<sub>PU</sub> = 3 × 10<sup>−9</sup> cm<sup>2</sup> s<sup>−1</sup>, K = 1). Three early samples give a long ridge (r = −0.95); a near-equilibrium sample or Raman profiles shrink it (r = −0.65, −0.18, −0.23).
+
+**Why it matters.** The plan includes one near-equilibrium sample or Raman profiles, so that K and D can be measured separately.
+
+---
+
+### 3. Calibrate UV-vis first
+
+<p align="center">
+  <img src="figures/global_sensitivity.png" alt="Global sensitivity of the design outputs" width="85%">
+</p>
+
+**What it shows.** Share of variance (η<sup>2</sup>) of two design outputs explained by each unknown input, with D<sub>PU</sub> and K fixed. UV-vis repeatability explains 0.94 of the uncertainty of ln K; the detection limit explains 0.51 of the detection margin at the first sample.
+
+**Why it matters.** These two calibrations come first, before any PU film exists.
+
+---
+
+### 4. FTIR can miss or mimic the reaction
+
+<p align="center">
+  <img src="figures/carbonyl_shifts.png" alt="Computed C=O stretch shifts" width="85%">
+</p>
+
+**What it shows.** Computed C=O shifts on binding (top) and for thio-products against their parent esters (bottom). A product C=O lies 114–142 cm<sup>−1</sup> below its parent only when the Li of S<sub>4</sub>Li sits on it; without Li it stays within 14 cm<sup>−1</sup> (DFT). Positive xTB values: Li<sub>2</sub>S<sub>4</sub> on the alkoxy O.
+
+**Why it matters.** An un-aged control film and model-compound NMR are added, because FTIR alone cannot confirm the reaction.
+
+---
+
+📄 **Two-page summary:** [application_summary.pdf](application_summary.pdf) · [application_summary.docx](application_summary.docx)
 
 ## Limitations
 
