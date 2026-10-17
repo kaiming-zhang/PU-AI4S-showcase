@@ -33,16 +33,6 @@ polysulfide shuttling in lithium–sulfur batteries. All seven PUs share an HDI/
 4. **Predictions written before the experiment.** 43 rule-based entries (22 directional),
    each with a threshold or interval, a decision rule and a scoring script, fixed before the first synthesis
    (version 2).
-   
-## Selected figures
-
-![Receiver uptake rate: the PU receiver is not an ideal sink](figures/receiver_not_ideal_sink.png)
-
-![K–D identifiability](figures/K_D_identifiability.png)
-
-![Global sensitivity of the design](figures/global_sensitivity.png)
-
-![Computed C=O shifts](figures/carbonyl_shifts.png)
 
 ## Methods and tools
 
@@ -50,7 +40,27 @@ Finite-volume diffusion model verified against a Laplace-domain solution; emcee 
 identifiability; global sensitivity analysis; GFN2-xTB; B3LYP-D3(BJ) with counterpoise correction;
 harmonic frequencies; pytest (61 tests) and seeded, reproducible runs.
 
-`figures/`: four figures from the toolkit, unchanged. `application_summary.pdf` / `.docx`: two-page summary.
+## Figures
+
+All inputs are assumed values; the figures are drawn from stored results of the toolkit.
+
+![receiver not ideal sink](figures/receiver_not_ideal_sink.png)
+
+**What you see:** receiver uptake rate relative to the ideal steady rate K D c<sub>0</sub>/L<sub>m</sub> (assumed inputs): the PU receivers peak at only 0.31–0.48 of it (shaded: default couple within 10 % of its peak, τ = 0.27–0.84). **What it means for the experiment:** the time-lag slope would underestimate the permeability, so K and D are fitted with the full model.
+
+![K D identifiability](figures/K_D_identifiability.png)
+
+**What you see:** posterior regions of K and D<sub>PU</sub> from synthetic data (assumed D<sub>PU</sub> = 3 × 10<sup>−9</sup> cm<sup>2</sup> s<sup>−1</sup>, K = 1). Three early samples give a long ridge (r = −0.95); a near-equilibrium sample or Raman profiles shrink it (r = −0.65, −0.18, −0.23). **What it means for the experiment:** the plan includes one near-equilibrium sample or Raman profiles.
+
+![global sensitivity](figures/global_sensitivity.png)
+
+**What you see:** share of variance (η<sup>2</sup>) of two design outputs explained by each unknown input, with D<sub>PU</sub> and K fixed: UV-vis repeatability explains 0.94 of the uncertainty of ln K, the detection limit 0.51 of the detection margin at the first sample. **What it means for the experiment:** these two calibrations come first, before the PU films exist.
+
+![carbonyl shifts](figures/carbonyl_shifts.png)
+
+**What you see:** computed C=O shifts on binding (top) and for thio-products against their parent (bottom). A product C=O lies 114–142 cm<sup>−1</sup> below its parent only when the Li of S<sub>4</sub>Li sits on it; without Li it stays within 14 cm<sup>−1</sup> (DFT). Positive xTB values: Li<sub>2</sub>S<sub>4</sub> on the alkoxy O. **What it means for the experiment:** FTIR can miss or mimic the reaction, so an un-aged control and model-compound NMR are added.
+
+`application_summary.pdf` / `.docx`: two-page summary.
 
 ## Limitations
 
