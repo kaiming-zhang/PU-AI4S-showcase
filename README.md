@@ -42,7 +42,7 @@ harmonic frequencies; pytest (61 tests) and seeded, reproducible runs.
 
 ## Figures
 
-> All inputs are assumed values. The figures are drawn from stored results of the toolkit; no experimental data exist yet.
+> All inputs are assumed values. The figures are drawn from stored results of the toolkit.
 
 ---
 
