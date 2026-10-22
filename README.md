@@ -94,8 +94,7 @@ harmonic frequencies; pytest (61 tests) and seeded, reproducible runs.
 
 ---
 
-📄 **Two-page summary:** [application_summary.pdf](application_summary.pdf) · [application_summary.docx](application_summary.docx)
-
+📄 **Two-page summary:** [application_summary.pdf](application_summary.pdf) 
 ## Limitations
 
 All inputs are assumptions and there are no experimental data yet. Single model molecules cannot
